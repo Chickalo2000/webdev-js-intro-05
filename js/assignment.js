@@ -44,11 +44,12 @@ function addShiftAndPopValues() {
 }
 
 function updateAnswerFour() {
-    answerFourEl.textContent = todos.join(",");
+    //answerFourEl.textContent = todos;
+  // answerFourEl.textContent = todos[3,2,1,0];   
 }
 
 function reverseTodoList() {
-
+    reversed = todos.reverse();
 }
 
 function updateAnswerFive() {
@@ -56,7 +57,7 @@ function updateAnswerFive() {
 }
 
 function updateAnswerSix() {
-
+    answerSixEl.textContent = todos[3,2,1,0];
 }
 
 function render() {
