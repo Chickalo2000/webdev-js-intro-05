@@ -22,42 +22,57 @@ const answerFiveEl = document.getElementById("answer-five");
 const answerSixEl = document.getElementById("answer-six");
 const submissionBtn = document.getElementById("submission-btn");
 
+// Q1.answerOne - output1
 function updateAnswerOne() {
-    answerOneEl.textContent = todos.join(",");
-    
+    answerOneEl.textContent = todos.join(",");  
 }
 
+// Q2.answerTwo - output2
 function updateAnswerTwo() {
     answerTwoEl.textContent = todos[2];
 }
 
+//Q3. answerthree - output4
 function removeLastValue() {
-   popValue = todos.pop();
+    popValue = todos.pop();
+    answerFourEl.textContent = todos;
 }
 
+//Q7. Output
 function removeFirstValue() {
-    shiftValue = todos.shift(); 
+    shiftValue = todos.shift();
+    answerSixEl.textContent = todos;
 }
 
+//Q8
 function addShiftAndPopValues() {
-    todos.push(shiftValue, popValue);
+    todos.push(shiftValue,popValue);
+
+    //answerSixEl.textContent = todos;
 }
 
 function updateAnswerFour() {
-    //answerFourEl.textContent = todos;
-  // answerFourEl.textContent = todos[3,2,1,0];   
+   // answerFiveEl.textContent = todos;
+    //answerSixEl.textContent = todos(',')
+    //answerThreeEl.textContent = todos[3,2,1,0];   
 }
 
+//answer 5
 function reverseTodoList() {
-    reversed = todos.reverse();
+    reversed = todos.reverse(popValue, shiftValue);
+    answerFiveEl.textContent = todos;
 }
 
 function updateAnswerFive() {
-
+    //todos.push(popValue);
+    //todos.push(shiftValue);
+    //answerFourEl.textContent = todos;
+    answerFiveEl.textContent = todos;
+ // answerSixEl.textContent = todos;
 }
 
 function updateAnswerSix() {
-    answerSixEl.textContent = todos[3,2,1,0];
+    answerSixEl.textContent = todos;
 }
 
 function render() {
